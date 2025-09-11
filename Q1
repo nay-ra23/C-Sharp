@@ -82,9 +82,9 @@ namespace Hello
                 double milespergalons = (distance * 0.6214) / (litres * 0.2642);
 
                 Console.WriteLine("Litres/100km: " + litresper100km);
-                Console.WriteLine($"             {litresper100km:F2}");
+                Console.WriteLine($"             {litresper100km:F2}");   //rounds up to 2 decimal places   F2 means fixed-point with 2 digits after decimal.
                 Console.WriteLine("Miles/Gallons: " + milespergalons);
-                Console.WriteLine($"             {milespergalons:F2}");
+                Console.WriteLine($"             {milespergalons:F2}");   //rounds up to 2 decimal places
             }
         
         }
