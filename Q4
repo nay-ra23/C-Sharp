@@ -1,0 +1,86 @@
+Question-4
+Problem Statement – FOE college wants to recognize the department which has succeeded in getting the maximum number of placements for this academic year. The departments that have participated in the recruitment drive are CSE,ECE, MECH. Help the college find the department getting maximum placements. Check for all the possible output given in the sample snapshot
+
+Note : If any input is negative, the output should be “Input is Invalid”.  If all department has equal number of placements, the output should be “None of the department has got the highest placement”.
+
+Sample Input 1:
+
+Enter the no of students placed in CSE:90
+Enter the no of students placed in ECE:45
+Enter the no of students placed in MECH:70
+Sample Output 1:
+
+Highest placement
+CSE
+
+Sample Input 2:
+
+Enter the no of students placed in CSE:55
+Enter the no of students placed in ECE:85
+Enter the no of students placed in MECH:85
+Sample Output 2:
+
+Highest placement
+ECE
+
+MECH
+
+Sample Input 3:
+
+Enter the no of students placed in CSE:0
+Enter the no of students placed in ECE:0
+Enter the no of students placed in MECH:0
+Sample Output 3:
+
+None of the department has got the highest placement
+Sample Input 4:
+
+Enter the no of students placed in CSE:10
+Enter the no of students placed in ECE:-50
+Enter the no of students placed in MECH:40
+Sample Output 4:
+
+Input is Invalid
+
+
+using System;
+using System.ComponentModel.Design;
+
+namespace Hello
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the no of students in CSE: ");
+            int CSE = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the no of students placed in ECE: ");
+            int ECE = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the no of students placed in MECH: ");
+            int MECH = Convert.ToInt32(Console.ReadLine());
+
+            if (CSE <= 0 || ECE <= 0 || MECH <= 0)
+            {
+                Console.WriteLine("Invalid Input");
+                return;
+            }
+            else if (CSE == ECE && CSE == MECH)
+            {
+                Console.WriteLine("None of the department has got the highest placement.");
+                return;
+            }
+
+            else
+            {
+                int max = Math.Max(CSE, Math.Max(ECE, MECH));
+                Console.WriteLine("Highest placement");
+
+                if (CSE == max) Console.WriteLine("CSE");
+                if (ECE == max) Console.WriteLine("ECE");
+                if (MECH == max) Console.WriteLine("MECH");
+            }
+        }
+    }
+}
+
+
