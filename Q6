@@ -1,0 +1,64 @@
+Question-6
+Problem Statement – Rhea Pandey’s teacher has asked her to prepare well for the lesson on seasons. When her teacher tells a month, she needs to say the season corresponding to that month. Write a program to solve the above task.
+
+Spring – March to May,
+Summer – June to August,
+Autumn – September to November and,
+Winter – December to February.
+Month should be in the range 1 to 12.  If not the output should be “Invalid month”.
+
+Sample Input 1:
+
+Enter the month:11
+Sample Output 1:
+
+Season:Autumn
+Sample Input 2:
+
+Enter the month:13
+Sample Output 2:
+
+Invalid month
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.ComponentModel.Design;
+
+namespace Hello
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the month: ");
+            int month = Convert.ToInt32(Console.ReadLine());
+
+
+            if (month < 1 || month > 12)
+            {
+                Console.WriteLine ("Invalid Month!");
+                return;
+            }
+
+
+            if (month >= 3 && month <= 5)
+            {
+                Console.WriteLine("Season: Spring");
+            }
+            else if (month >= 6 && month <= 8)
+            {
+                Console.WriteLine("Season: Summer");
+            }
+            else if (month >= 9 && month <= 11)
+            {
+                Console.WriteLine("Season: Autumn");
+            }
+            else Console.WriteLine("Season: Winter");
+        }
+    }
+}
+            
+          
+        
+  
