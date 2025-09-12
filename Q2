@@ -19,7 +19,7 @@ No of pizzas:10
 No of puffs:12
 No of cooldrinks:5
 Total price=1290
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 using System;
 using System.ComponentModel.Design;
