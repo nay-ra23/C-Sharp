@@ -1,0 +1,30 @@
+using System;
+
+class Program
+{
+    static int ExpandNumber(int num)
+    {
+        int power = 0;
+        int product = 1;
+
+        while (num > 0)
+        {
+            int digit = num % 10;                    // take last digit
+            int term = digit * (int)Math.Pow(10, power);
+            product *= term;
+            num /= 10;                               // remove last digit
+            power++;                                 // increase power
+        }
+
+        return product;
+    }
+
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int num = int.Parse(Console.ReadLine());
+        
+        int result = ExpandNumber(num);
+        Console.WriteLine("Expanded product = " + result);
+    }
+}
